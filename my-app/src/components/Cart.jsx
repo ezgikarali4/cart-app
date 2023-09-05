@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 
 import CartItem from "./CartItem";
+import Total from "./Total";
 
 function Cart() {
   const cart = useSelector((state) => state.cart);
@@ -9,7 +10,6 @@ function Cart() {
     <div className="cart">
       <div className="cart__left">
         <div>
-          <h3>Shopping Cart</h3>
           {cart?.map((item) => (
             <CartItem
               key={item.id}
@@ -23,7 +23,9 @@ function Cart() {
         </div>
       </div>
 
-      <div className="cart__right">Total </div>
+      <div className="cart__right">
+        <Total />
+      </div>
     </div>
   );
 }
