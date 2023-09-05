@@ -14,7 +14,7 @@ function Total() {
   };
   return (
     <div className="total">
-      <h2>ORDER SUMMARY</h2>
+      <h2>Total Amount</h2>
       <div>
         <p className="total__p">
           total ({getTotal().totalQuantity} items) :{" "}
